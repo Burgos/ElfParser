@@ -1,0 +1,6 @@
+[package]
+name = "elf-reader"
+version = "0.1.0"
+authors = ["Nemanja Boric <4burgos@gmail.com>"]
+
+[dependencies]
