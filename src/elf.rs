@@ -49,3 +49,18 @@ pub struct Elf32_Phdr {
     p_flags: Elf32_Word,
     p_align: Elf32_Word,
 }
+
+/// Elf32 section header
+#[repr(C)]
+pub struct Elf32_Shrdr {
+    sh_name: Elf32_Word,
+    sh_type: Elf32_Word,
+    sh_flags: Elf32_Word,
+    sh_addr: Elf32_Addr,
+    sh_offset: Elf32_Off,
+    sh_size: Elf32_Word,
+    sh_link: Elf32_Word,
+    sh_info: Elf32_Word,
+    sh_addalign: Elf32_Word,
+    sh_entsize: Elf32_Word,
+}
