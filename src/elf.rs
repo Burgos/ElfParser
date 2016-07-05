@@ -75,3 +75,18 @@ pub struct Elf32_Sym {
     st_other: u8,
     st_shndx: Elf32_Half,
 }
+
+/// Elf32 relocation structure that doesn't need an addend
+#[repr(C)]
+pub struct Elf32_Rel {
+    r_offset: Elf32_Addr,
+    r_info: Elf32_Word,
+}
+
+/// Elf32 relocation structure that needs an addend
+#[repr(C)]
+pub struct Elf32_Rela {
+    r_offset: Elf32_Addr,
+    r_info: Elf32_Word,
+    r_addent: Elf32_Sword
+}
