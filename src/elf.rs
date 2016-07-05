@@ -64,3 +64,14 @@ pub struct Elf32_Shrdr {
     sh_addalign: Elf32_Word,
     sh_entsize: Elf32_Word,
 }
+
+/// Elf32 symbol table
+#[repr(C)]
+pub struct Elf32_Sym {
+    st_name: Elf32_Word,
+    st_value: Elf32_Addr,
+    st_size: Elf32_Word,
+    st_info: u8,
+    st_other: u8,
+    st_shndx: Elf32_Half,
+}
