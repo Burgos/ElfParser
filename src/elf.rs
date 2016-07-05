@@ -37,3 +37,15 @@ pub struct Elf32_Ehdr {
     e_shstrndx: Elf32_Half,
 }
 
+/// Elf32 Program header
+#[repr(C)]
+pub struct Elf32_Phdr {
+    p_type: Elf32_Word,
+    p_offset: Elf32_Off,
+    p_vaddr: Elf32_Addr,
+    p_paddr: Elf32_Addr,
+    p_filesz: Elf32_Word,
+    p_memsz: Elf32_Word,
+    p_flags: Elf32_Word,
+    p_align: Elf32_Word,
+}
