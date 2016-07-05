@@ -28,8 +28,6 @@
 /// $FreeBSD: head/sys/sys/elf_common.h 294844 2016-01-26 18:20:25Z emaste $
 ///
 
-const EI_NIDENT: usize = 4;
-
 // ELF32 types
 #[allow(non_camel_case_types)]
 type Elf32_Addr = u32;
@@ -117,3 +115,28 @@ pub struct Elf32_Rela {
     r_info: Elf32_Word,
     r_addent: Elf32_Sword
 }
+
+/// Magic number; byte 0
+const EI_MAG0: usize = 0;
+/// Magic number; byte 1
+const EI_MAG1: usize = 1;
+/// Magic number; byte 2
+const EI_MAG2: usize = 2;
+/// Magic number; byte 3
+const EI_MAG3: usize = 3;
+/// Class of machine
+const EI_CLASS: usize = 4;
+/// Data format
+const EI_DATA: usize = 5;
+/// ELF format version
+const EI_VERSION: usize = 6;
+/// Operating system / ABI ident
+const EI_OSABI: usize = 7;
+/// ABI version
+const EI_ABIVERSION: usize = 8;
+/// Start of architecture definition
+const OLD_EI_BRAND: usize = 8;
+/// Start of padding (per SV4 ABI)
+const EI_PAD: usize = 9;
+/// Size of e_ident array
+const EI_NIDENT: usize = 16;
