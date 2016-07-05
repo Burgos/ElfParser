@@ -140,3 +140,12 @@ const OLD_EI_BRAND: usize = 8;
 const EI_PAD: usize = 9;
 /// Size of e_ident array
 const EI_NIDENT: usize = 16;
+
+
+/// Values for the magic number bytes
+const ELFMAG0: u8 = 0x7f;
+const ELFMAG1: u8 = 'E' as u8;
+const ELFMAG2: u8 = 'L' as u8;
+const ELFMAG3: u8 = 'F' as u8;
+const ELFMAG: &'static str = "\u{177}ELF";
+const SELFMAG: usize = 4;
