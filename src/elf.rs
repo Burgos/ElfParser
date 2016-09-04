@@ -408,3 +408,45 @@ enum EiMachine {
     /// RISC-V
     EM_RISCV    = 243,
 }
+
+enum EiVersion {
+	// Invalid ELF version
+	EV_NONE = 0,
+	// Current version
+	EV_CURRENT = 1,
+}
+
+enum EPhnum {
+	// Extenden Numbering
+	PN_XNUM = 0xFFFF,
+}
+
+enum PType {
+	// Program header table entry
+	PT_NULL = 0,
+	// Loadable program segment
+	PT_LOAD = 1,
+	// Dynamic linking information
+	PT_DYNAMIC = 2,
+	// Program interpreter
+	PT_INTERP = 3,
+	// Auxiliary information
+	PT_NOTE = 4,
+	// Reserved, unspecified semantics
+	PT_SHLIB = 5,
+	// Entry for header table itself
+	PT_PHDR = 6,
+	// Thread local storage segment
+	PT_TLS = 7,
+	// OS-Specific
+	PT_LOOS = 0x6000000,
+	// OS-Specific
+	PT_HIOS = 0x6FFFFFF,
+	// Processor-specific
+	PT_LOPROC = 0x7000000,
+	// Processor-specific
+	PT_HIPROC = 0x7FFFFFF, 
+	
+}
+
+
