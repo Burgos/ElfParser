@@ -152,12 +152,6 @@ const ELFMAG: &'static str = "\u{177}ELF";
 /// Magic string size
 const SELFMAG: usize = 4;
 
-/// Value for e_ident[EI_VERSION]
-enum EiVersion {
-    EV_NONE = 0,
-    EV_CURRENT = 1
-}
-
 /// Values for  EI_DATA
 enum EiData {
     /// Unknwon data format
